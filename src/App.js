@@ -1,21 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import AppBar from 'material-ui/AppBar'
+import Drawer from 'material-ui/Drawer'
+import MenuItem from 'material-ui/MenuItem'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {open: false}
+  }
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className="App">
+          <AppBar
+            title="Title"
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+            onLeftIconButtonTouchTap={() => this.setState({open: !this.state.open})}
+          />
+          <Drawer
+            open={this.state.open}
+            docked={false}
+            width={200}
+            onRequestChange={(open) => this.setState({open})}
+          >
+            <MenuItem>Menu Item</MenuItem>
+            <MenuItem>Menu Item 2</MenuItem>
+          </Drawer>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
     );
   }
 }
 
-export default App;
+export default App
