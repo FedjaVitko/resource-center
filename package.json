@@ -3,16 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-eslint": "^7.2.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.4",
     "material-ui-icons": "^1.0.0-beta.5",
+    "prettier": "^1.5.3",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.11",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-tap-event-plugin": "^2.0.1",
+    "standard": "^10.0.3"
   },
   "scripts": {
-    "start": "set PORT=3007 && react-scripts start",
+    "start": "set PORT=3008 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "prettier 'src/**/*.js' 'src/components/**/*.js' '*.js' --write --single-quote --no-semi && standard --fix",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --no-semi",
+      "git add"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
