@@ -1,9 +1,126 @@
 import React, { Component } from 'react'
+import TextField from 'material-ui/TextField'
+import DatePicker from 'material-ui/DatePicker'
+import Checkbox from 'material-ui/Checkbox'
+import RaisedButton from '../components/MaterializeRaisedButton'
 
 class ServiceRequest extends Component {
-  state = {}
   render() {
-    return <h1>ServiceRequest View</h1>
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col s12 flow-text">
+            <h2> Please use this form to request services.</h2>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col s12 m6">
+            <TextField floatingLabelText="Floating Label Text" fullWidth />
+          </div>
+          <div className="col s12 m6">
+            <TextField floatingLabelText="Floating Label Text" fullWidth />
+          </div>
+          <div className="col s12 m6">
+            <TextField floatingLabelText="Floating Label Text" fullWidth />
+          </div>
+          <div className="col s12 m6">
+            <TextField floatingLabelText="Floating Label Text" fullWidth />
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Multiline and FloatingLabel"
+              multiLine={true}
+              rows={2}
+              fullWidth
+            />
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Multiline and FloatingLabel"
+              multiLine={true}
+              rows={2}
+              fullWidth
+            />
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Multiline and FloatingLabel"
+              multiLine={true}
+              rows={2}
+              fullWidth
+            />
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Multiline and FloatingLabel"
+              multiLine={true}
+              rows={2}
+              fullWidth
+            />
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Multiline and FloatingLabel"
+              multiLine={true}
+              rows={2}
+              fullWidth
+            />
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Multiline and FloatingLabel"
+              multiLine={true}
+              rows={2}
+              fullWidth
+            />
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Multiline and FloatingLabel"
+              multiLine={true}
+              rows={2}
+              fullWidth
+            />
+          </div>
+          <div className="col s12 m6">
+            <TextField
+              floatingLabelText="Multiline and FloatingLabel"
+              multiLine={true}
+              rows={2}
+              fullWidth
+            />
+          </div>
+          <div className="col s12 m6">
+            <DatePicker hintText="Portrait Dialog" />
+          </div>
+          <div className="col s12 m6">
+            <DatePicker hintText="File Upload" />
+          </div>
+          <div className="col s12 m6">
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+          </div>
+          <div className="col s12 m6">
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+            <Checkbox label="Simple" />
+          </div>
+          <div className="col s12">
+            <RaisedButton label="Submit" primary={true} />
+          </div>
+          <Checkbox label="Simple" />
+        </div>
+      </div>
+    )
   }
 }
 
