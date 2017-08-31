@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "babel-eslint": "^7.2.3",
+    "cross-env": "^5.0.5",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.4",
+    "material-ui": "^0.19.0",
     "material-ui-icons": "^1.0.0-beta.5",
     "nightmare": "^2.10.0",
     "prettier": "^1.5.3",
@@ -20,6 +22,7 @@
     "start": "set PORT=3008 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test-without-watch": "cross-env CI=true npm test",
     "eject": "react-scripts eject",
     "lint": "prettier 'src/**/*.js' 'src/components/**/*.js' '*.js' --write --single-quote --no-semi && standard --fix",
     "precommit": "lint-staged"
